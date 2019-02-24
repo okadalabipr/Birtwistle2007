@@ -1,4 +1,4 @@
-const variable = [
+const F_V = [
   "Empty"
   "E"
   "H"
@@ -119,6 +119,6 @@ const variable = [
   "pERK_ERKPpase"
 ];
 
-for (index,value) in enumerate(variable)
+for (index,value) in enumerate(F_V)
   eval(Meta.parse("const $value=$index"));
 end

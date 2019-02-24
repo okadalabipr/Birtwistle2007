@@ -1,5 +1,5 @@
-function initialValues()
-    u0::Vector{Float64} = zeros(length(variable));
+function initial_values()
+    u0::Vector{Float64} = zeros(length(F_V));
 
     u0[E1] = 274.0;
     u0[E2] = 158.0;

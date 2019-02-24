@@ -1,4 +1,4 @@
-const constant = [
+const F_P = [
     "VmaxPY"
     "KmPY"
     "kdeg"
@@ -216,12 +216,12 @@ const constant = [
     "kcat96"
 ];
 
-for (index,value) in enumerate(constant)
+for (index,value) in enumerate(F_P)
     eval(Meta.parse("const $value=$index"));
 end
 
-function setParamConst()
-    p::Vector{Float64} = zeros(length(constant));
+function f_params()
+    p::Vector{Float64} = zeros(length(F_P));
 
     p[VmaxPY] = 223.8776;
     p[KmPY] = 486.1398;

@@ -1,12 +1,12 @@
 using ODE;
 
-include("./model/setParamConst.jl");
-include("./model/setVarEnum.jl");
-include("./model/diffeq.jl");
-include("./model/initialValues.jl");
+include("model/f_parameter.jl");
+include("model/f_variable.jl");
+include("model/differential_equation.jl");
+include("model/initial_condition.jl");
 
-p = setParamConst();
-u0 = initialValues();
+p = f_params();
+u0 = initial_values();
 
 t = 0.0:1.0:1800.0;
 condition = 8;
