@@ -3,7 +3,7 @@ function diffeq(t,u)
     # extracellular volume to cytoplasmic volume ratio
     VeVc = 33.3;
 
-    # Fraction Dfinitions
+    # fraction definitions
     if u[sigmaS] + u[sigmaSP] + u[sigmaSP_G] > 0.0
         fsigmaS = u[sigmaS]/(u[sigmaS] + u[sigmaSP] + u[sigmaSP_G]);
     else
