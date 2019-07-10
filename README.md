@@ -3,16 +3,15 @@ Birtwistle, M. R. *et al.* Ligand-dependent responses of the ErbB signaling netw
 
 ## Requirements
 - **[Julia 1.0+](https://julialang.org)**
-    - [ODE](https://github.com/JuliaDiffEq/ODE.jl)
+    - [Sundials](https://github.com/JuliaDiffEq/Sundials.jl)
     - [PyPlot](https://github.com/JuliaPy/PyPlot.jl)
     - [IJulia](https://github.com/JuliaLang/IJulia.jl)
 
 ## Run Simulation and View Results
 ```julia
-include("simulation.jl");
-include("plot_func.jl");
-# savefig("./ErbBmodel.png",bbox_inches="tight");
-show();
+include("Birtwistle_et_al_2007.jl")
+using .Birtwistle_et_al_2007
+runSim()
 ```
 ## Installation
 
