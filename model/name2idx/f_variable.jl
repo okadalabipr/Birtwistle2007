@@ -1,7 +1,6 @@
 module V
 
 const F_V = [
-  "Empty"
   "E"
   "H"
   "E1"
