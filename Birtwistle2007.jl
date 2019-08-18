@@ -1,4 +1,4 @@
-module Birtwistle_et_al_2007
+module Birtwistle2007
 
 using PyPlot;
 
