@@ -27,7 +27,7 @@ include("Birtwistle2007.jl")
 using .Birtwistle2007
 runSim()
 ```
-![ErbBmodel](https://user-images.githubusercontent.com/31299606/60935404-c150b780-a304-11e9-9c67-8a14e8ba62d7.png)
+![ErbBsignaling](ErbBsignaling.png)
 
 ## Installation
     $ git clone https://github.com/okadalabipr/Birtwistle2007.git
