@@ -1,4 +1,4 @@
-F_P = [
+param_names = [
     'VmaxPY',
     'KmPY',
     'kdeg',
@@ -218,5 +218,5 @@ F_P = [
     'len_f_params'
 ]
 
-for i,name in enumerate(F_P):
-    exec('%s=%d'%(name,i))
+for idx,name in enumerate(param_names):
+    exec('%s=%d'%(name,idx))
