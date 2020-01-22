@@ -37,38 +37,35 @@ class Simulation(object):
     
     x = f_params()
     y0 = initial_values()
-
-    @classmethod
-    def numerical_integration(cls):
     
-        for i in range(cls.condition):
-            if i==0:
-                cls.y0[V.E] = 0.0
-                cls.y0[V.H] = 0.5
-            elif i==1:
-                cls.y0[V.E] = 0.0
-                cls.y0[V.H] = 10.0
-            elif i==2:
-                cls.y0[V.E] = 0.5
-                cls.y0[V.H] = 0.0
-            elif i==3:
-                cls.y0[V.E] = 0.5
-                cls.y0[V.H] = 0.5
-            elif i==4:
-                cls.y0[V.E] = 0.5
-                cls.y0[V.H] = 10.0
-            elif i==5:
-                cls.y0[V.E] = 10.0
-                cls.y0[V.H] = 0.0
-            elif i==6:
-                cls.y0[V.E] = 10.0
-                cls.y0[V.H] = 0.5
-            elif i==7:
-                cls.y0[V.E] = 10.0
-                cls.y0[V.H] = 10.0
-            
-            (T,Y) = solveode(diffeq,cls.y0,cls.tspan,tuple(cls.x))
-            
-            cls.ERK_act[:,i] = Y[:,V.ERKstar] + Y[:,V.pERK_ERKPpase]
-            cls.Akt_act[:,i] = Y[:,V.Aktstar]
+    for i in range(condition):
+        if i==0:
+            y0[V.E] = 0.0
+            y0[V.H] = 0.5
+        elif i==1:
+            y0[V.E] = 0.0
+            y0[V.H] = 10.0
+        elif i==2:
+            y0[V.E] = 0.5
+            y0[V.H] = 0.0
+        elif i==3:
+            y0[V.E] = 0.5
+            y0[V.H] = 0.5
+        elif i==4:
+            y0[V.E] = 0.5
+            y0[V.H] = 10.0
+        elif i==5:
+            y0[V.E] = 10.0
+            y0[V.H] = 0.0
+        elif i==6:
+            y0[V.E] = 10.0
+            y0[V.H] = 0.5
+        elif i==7:
+            y0[V.E] = 10.0
+            y0[V.H] = 10.0
+        
+        (T,Y) = solveode(diffeq,y0,tspan,tuple(x))
+        
+        ERK_act[:,i] = Y[:,V.ERKstar] + Y[:,V.pERK_ERKPpase]
+        Akt_act[:,i] = Y[:,V.Aktstar]
             

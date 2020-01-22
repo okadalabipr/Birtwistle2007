@@ -3,7 +3,6 @@ import plot_func
 
 def run_simulation():
     sim = Simulation()
-    sim.numerical_integration()
 
     plot_func.timecourse(sim)
 
