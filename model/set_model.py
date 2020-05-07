@@ -1,7 +1,6 @@
-from .name2idx import parameters as C
-from .name2idx import variables as V
+from .name2idx import C, V
 
-def diffeq(t,y,x):
+def diffeq(t, y, x):
 
     # extracellular volume to cytoplasmic volume ratio
     VeVc = 33.3
@@ -45,7 +44,7 @@ def diffeq(t,y,x):
     v18d = x[C.kdeg]*y[V.E11R]
     v73d = x[C.kdeg]*y[V.E11T]
 
-    v = [0]*97
+    v = [0] * 97
 
     v[1] = (x[C.kon1]*y[V.E]*y[V.E1] - x[C.EGF_off]*y[V.E_E1])
     v[2] = (x[C.kon2]*y[V.H]*y[V.E3] - x[C.HRGoff_3]*y[V.H_E3])
@@ -144,7 +143,7 @@ def diffeq(t,y,x):
     v[95] = (x[C.kon95]*y[V.pERK]*y[V.ERKPpase] - x[C.koff95]*y[V.pERK_ERKPpase])
     v[96] = x[C.kcat96]*y[V.pERK_ERKPpase]
 
-    dydt = [0]*V.len_f_vars
+    dydt = [0] * V.len_f_vars
     
     dydt[V.E1] = -v[1] - v[81]
     dydt[V.E2] = -v[5] - v[6] - v[8] - v[82]
@@ -269,7 +268,7 @@ def diffeq(t,y,x):
 
 def f_params():
     
-    x = [0]*C.len_f_params
+    x = [0] * C.len_f_params
 
     x[C.VmaxPY] = 223.8776
     x[C.KmPY] = 486.1398
@@ -492,7 +491,7 @@ def f_params():
 
 def initial_values():
     
-    y0 = [0]*V.len_f_vars
+    y0 = [0] * V.len_f_vars
 
     y0[V.E1] = 274.0
     y0[V.E2] = 158.0
