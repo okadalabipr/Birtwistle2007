@@ -1,6 +1,6 @@
 module C
 
-const F_P = [
+const param_names = [
     "VmaxPY"
     "KmPY"
     "kdeg"
@@ -216,12 +216,12 @@ const F_P = [
     "kon95"
     "koff95"
     "kcat96"
-];
+]
 
-for (index,value) in enumerate(F_P)
-    eval(Meta.parse("const $value=$index"));
+for (index,value) in enumerate(param_names)
+    eval(Meta.parse("const $value=$index"))
 end
 
-const len_f_params = length(F_P);
+const len_f_params = length(param_names)
 
 end  # module

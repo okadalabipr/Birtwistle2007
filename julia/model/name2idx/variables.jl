@@ -1,6 +1,6 @@
 module V
 
-const F_V = [
+const var_names = [
   "E"
   "H"
   "E1"
@@ -118,12 +118,12 @@ const F_V = [
   "ERKPpase"
   "ERKstar_ERKPpase"
   "pERK_ERKPpase"
-];
+]
 
-for (index,value) in enumerate(F_V)
-  eval(Meta.parse("const $value=$index"));
+for (index,value) in enumerate(var_names)
+  eval(Meta.parse("const $value=$index"))
 end
 
-const len_f_vars = length(F_V);
+const len_f_vars = length(var_names)
 
 end  # module
