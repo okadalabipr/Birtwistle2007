@@ -5,7 +5,7 @@ using Sundials;
 # using ODE;
 
 p = f_params();
-u0 = initialValues();
+u0 = initial_values();
 
 const tspan = (0.0,1800.0);
 const t = collect(tspan[1]:1.0:tspan[end]);
