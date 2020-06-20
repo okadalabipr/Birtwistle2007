@@ -1,7 +1,8 @@
 import numpy as np
 from scipy.integrate import ode
 
-from model.set_model import *
+from .name2idx import C, V
+from .set_model import diffeq, param_values, initial_values
 
 def solveode(diffeq, y0, tspan, args):
     sol = ode(diffeq)
@@ -41,7 +42,7 @@ class Simulation(object):
     ERK_act = np.empty((len(t), len(conditions)))
     Akt_act = np.empty((len(t), len(conditions)))
     
-    x = f_params()
+    x = param_values()
     y0 = initial_values()
     
     for i, condition in enumerate(conditions):
