@@ -1,6 +1,6 @@
 module V
 
-const var_names = [
+const NAMES = [
   "E"
   "H"
   "E1"
@@ -120,10 +120,10 @@ const var_names = [
   "pERK_ERKPpase"
 ]
 
-for (index,value) in enumerate(var_names)
+for (index,value) in enumerate(NAMES)
   eval(Meta.parse("const $value=$index"))
 end
 
-const len_f_vars = length(var_names)
+const NUM = length(NAMES)
 
 end  # module

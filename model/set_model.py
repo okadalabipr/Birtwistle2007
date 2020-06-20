@@ -143,7 +143,7 @@ def diffeq(t, y, x):
     v[95] = (x[C.kon95]*y[V.pERK]*y[V.ERKPpase] - x[C.koff95]*y[V.pERK_ERKPpase])
     v[96] = x[C.kcat96]*y[V.pERK_ERKPpase]
 
-    dydt = [0] * V.len_f_vars
+    dydt = [0] * V.NUM
     
     dydt[V.E1] = -v[1] - v[81]
     dydt[V.E2] = -v[5] - v[6] - v[8] - v[82]
@@ -266,9 +266,9 @@ def diffeq(t, y, x):
     return dydt
 
 
-def f_params():
+def param_values():
     
-    x = [0] * C.len_f_params
+    x = [0] * C.NUM
 
     x[C.VmaxPY] = 223.8776
     x[C.KmPY] = 486.1398
@@ -491,7 +491,7 @@ def f_params():
 
 def initial_values():
     
-    y0 = [0] * V.len_f_vars
+    y0 = [0] * V.NUM
 
     y0[V.E1] = 274.0
     y0[V.E2] = 158.0

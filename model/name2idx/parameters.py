@@ -1,4 +1,4 @@
-param_names = [
+NAMES = [
     'VmaxPY',
     'KmPY',
     'kdeg',
@@ -216,11 +216,11 @@ param_names = [
     'kcat96',
 ]
 
-for idx, name in enumerate(param_names):
+for idx, name in enumerate(NAMES):
     exec(
         '{} = {:d}'.format(
             name, idx
         )
     )
 
-len_f_params = len(param_names)
+NUM = len(NAMES)

@@ -1,4 +1,4 @@
-var_names = [
+NAMES = [
     'E',
     'H',
     'E1',
@@ -118,11 +118,11 @@ var_names = [
     'pERK_ERKPpase',
 ]
 
-for idx, name in enumerate(var_names):
+for idx, name in enumerate(NAMES):
     exec(
         '{} = {:d}'.format(
             name, idx
         )
     )
 
-len_f_vars = len(var_names)
+NUM = len(NAMES)
