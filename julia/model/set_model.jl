@@ -262,9 +262,9 @@ function diffeq(du,u,p,t)
 end
 
 
-function f_params()
+function param_values()
 
-    p::Vector{Float64} = zeros(C.len_f_params)
+    p::Vector{Float64} = zeros(C.NUM)
 
     p[C.VmaxPY] = 223.8776
     p[C.KmPY] = 486.1398
@@ -488,7 +488,7 @@ end
 
 function initial_values()
     
-    u0::Vector{Float64} = zeros(V.len_f_vars)
+    u0::Vector{Float64} = zeros(V.NUM)
 
     u0[V.E1] = 274.0
     u0[V.E2] = 158.0
