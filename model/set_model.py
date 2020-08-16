@@ -44,7 +44,7 @@ def diffeq(t, y, x):
     v18d = x[C.kdeg]*y[V.E11R]
     v73d = x[C.kdeg]*y[V.E11T]
 
-    v = [0] * 97
+    v = {}
 
     v[1] = (x[C.kon1]*y[V.E]*y[V.E1] - x[C.EGF_off]*y[V.E_E1])
     v[2] = (x[C.kon2]*y[V.H]*y[V.E3] - x[C.HRGoff_3]*y[V.H_E3])

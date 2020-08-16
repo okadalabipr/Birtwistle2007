@@ -42,7 +42,7 @@ function diffeq(du,u,p,t)
     v18d = p[C.kdeg]*u[V.E11R]
     v73d = p[C.kdeg]*u[V.E11T]
 
-    v::Vector{Float64} = zeros(96)
+    v = Dict{Int64,Float64}()
 
     v[1] = (p[C.kon1]*u[V.E]*u[V.E1] - p[C.EGF_off]*u[V.E_E1])
     v[2] = (p[C.kon2]*u[V.H]*u[V.E3] - p[C.HRGoff_3]*u[V.H_E3])
